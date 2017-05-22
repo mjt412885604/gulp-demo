@@ -1,0 +1,120 @@
+@import './base.css';
+@import '../css/sprite.css';
+$themeColor: #4A89DC;
+$yellowColor: #F3BA45;
+$redColor: #E95941;
+header {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 17px;
+    background-color: $themeColor;
+    color: #fff;
+}
+
+footer {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 17px;
+    background-color: $redColor;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    display: flex;
+    >div{
+        flex: 1;
+        position: relative;
+        &::after{
+            content: '';
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #d6d6d7;
+        }
+    }
+    .icon1::after{
+        background: url(../images/icon/grap-food.png) no-repeat;
+        background-size: cover;
+    }
+    .icon2::after{
+        background: url(../images/icon/grap-glus.png) no-repeat;
+        background-size: cover;
+    }
+    .icon3::after{
+        background: url(../images/icon/grap-ins.png) no-repeat;
+        background-size: cover;
+    }
+    .icon4::after{
+        background: url(../images/icon/grap-food.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+.scroll-content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 45px;
+    bottom: 45px;
+    background-color: #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    .load-more {
+        padding: 15px;
+        color: #828282;
+        text-align: center;
+    }
+}
+
+.content {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #d9d9d9;
+        transform: scaleY(.5);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #d9d9d9;
+        transform: scaleY(.5);
+    }
+    >div {
+        padding: 15px;
+        font-size: 16px;
+        color: #626262;
+        position: relative;
+        &:active {
+            background-color: #efefef;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 0;
+            height: 1px;
+            background-color: #d9d9d9;
+            transform: scaleY(.5);
+        }
+        &:last-child::after {
+            height: 0;
+        }
+    }
+}

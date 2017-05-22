@@ -1,0 +1,114 @@
+@import url(./base.css);
+@import url(../css/sprite.css);
+header {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #4A89DC;
+  color: #fff; }
+
+footer {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #E95941;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  footer > div {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative; }
+    footer > div::after {
+      content: '';
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background-color: #d6d6d7; }
+  footer .icon1::after {
+    background: url(../images/icon/grap-food.png) no-repeat;
+    background-size: cover; }
+  footer .icon2::after {
+    background: url(../images/icon/grap-glus.png) no-repeat;
+    background-size: cover; }
+  footer .icon3::after {
+    background: url(../images/icon/grap-ins.png) no-repeat;
+    background-size: cover; }
+  footer .icon4::after {
+    background: url(../images/icon/grap-food.png) no-repeat;
+    background-size: cover; }
+
+.scroll-content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 45px;
+  bottom: 45px;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+  .scroll-content .load-more {
+    padding: 15px;
+    color: #828282;
+    text-align: center; }
+
+.content {
+  position: relative; }
+  .content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+    -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5); }
+  .content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+    -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5); }
+  .content > div {
+    padding: 15px;
+    font-size: 16px;
+    color: #626262;
+    position: relative; }
+    .content > div:active {
+      background-color: #efefef; }
+    .content > div::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 0;
+      height: 1px;
+      background-color: #d9d9d9;
+      -webkit-transform: scaleY(0.5);
+          -ms-transform: scaleY(0.5);
+              transform: scaleY(0.5); }
+    .content > div:last-child::after {
+      height: 0; }
